@@ -12,4 +12,4 @@
 */
 
 Route::get('/', "Site\HomeController@index")->name('site.index');
-Route::get('/store', "Site\HomeController@store")->name('site.store');
+Route::post('/store', "Site\HomeController@store")->name('site.store');

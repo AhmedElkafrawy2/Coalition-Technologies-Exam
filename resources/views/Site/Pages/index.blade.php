@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        <form id= "add-product-form" action="{{ route('site.store') }}" data-url="{{ url('/') }}" method="POST">
+        <form id= "add-product-form" action="{{ route('site.store') }}" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="product-name">Product Name</label>
@@ -21,7 +21,7 @@
                 <label for="price">Price</label>
                 <input type="text" class="form-control" id="price" placeholder="Enter the Product price">
             </div>
-            <button type="submit" id="btn-form-submit" class="btn btn-primary">Submit</button>
+            <button type="button" id="btn-form-submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
@@ -43,6 +43,8 @@
                     <td>{{ $product['name'] }}</td>
                     <td>{{ $product['quantity'] }}</td>
                     <td>{{ $product['price'] }}</td>
+                    <td>{{ $product['Date'] }}</td>
+                    <td>{{ (int)$product['price']  * (int)($product['quantity']) }}</td>
                 </tr>
             @endforeach
             </tbody>
