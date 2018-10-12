@@ -1,0 +1,27 @@
+/*
+    General Section
+*/
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+/*
+    Header section
+*/
+
+/*
+    Page Content
+
+*/
+
+/*
+
+    Footer
+*/
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+
+}
